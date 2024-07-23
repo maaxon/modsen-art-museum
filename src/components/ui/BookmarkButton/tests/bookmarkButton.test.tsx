@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { useBookmarks } from '../../../../../../modsen-art-museum-main/src/utils/BookmarkContext/bookmarkContext.tsx';
+import { useBookmarks } from '@utils/BookmarkContext/bookmarkContext.tsx';
 import { ThemeProvider } from 'styled-components';
 import BookmarkButton from '../bookmarkButton.tsx';
 
