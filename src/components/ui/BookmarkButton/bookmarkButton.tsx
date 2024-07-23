@@ -1,4 +1,4 @@
-import { useBookmarks } from '../../../../../modsen-art-museum-main/src/utils/BookmarkContext/bookmarkContext.tsx';
+import { useBookmarks } from '@utils/BookmarkContext/bookmarkContext.tsx';
 import React, { useCallback, useEffect, useState } from 'react';
 import { BookmarkIcon, Circle } from './bookmarkButton.styles.ts';
 

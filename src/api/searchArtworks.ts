@@ -1,5 +1,5 @@
-import { API_BASE_URL, SEARCH_ENDPOINT } from '../../../modsen-art-museum-main/src/constants/constants.ts';
-import { Artwork } from '../../../modsen-art-museum-main/src/types/types.ts';
+import { API_BASE_URL, SEARCH_ENDPOINT } from '@constants/constants.ts';
+import { Artwork } from '@type/types.ts';
 
 export const searchArtworks = async (query: string): Promise<Artwork[]> => {
   try {

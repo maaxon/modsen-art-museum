@@ -1,9 +1,9 @@
 import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
-import { SmallCardProps } from '../../../../../modsen-art-museum-main/src/types/types.ts';
+import { SmallCardProps } from '@type/types.ts';
 import React, { lazy, memo, useCallback, useMemo } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
-import { textLengthLimiter } from '../../../../../modsen-art-museum-main/src/utils/textLenghtLimiter/textLengthLimiter.ts';
-import noImage from '../../../../../modsen-art-museum-main/src/assets/images/noImage.png'
+import { textLengthLimiter } from '@utils/textLenghtLimiter/textLengthLimiter.ts';
+import noImage from '@assets/images/noImage.png'
 
 const BookmarkButton = lazy(() => import('../BookmarkButton/bookmarkButton.tsx'));
 

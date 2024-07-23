@@ -1,6 +1,6 @@
 import Pagination from '@ui/Pagination/pagination.tsx';
 import TitleSection from '@ui/TitleSection/titleSection.tsx';
-import useArtworks from '../../../../../modsen-art-museum-main/src/hooks/useArtworks.ts';
+import useArtworks from '@hooks/useArtworks.ts';
 import React, {  memo, useCallback, useMemo, useState } from 'react';
 import { Gallery, Wrapper } from './topics.styles.ts';
 import CardsLoader from '@ui/SkeletonLoader/CardsLoader.tsx';

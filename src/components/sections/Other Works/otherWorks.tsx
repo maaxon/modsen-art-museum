@@ -2,7 +2,7 @@ import SmallCard from '@ui/SmallCard/smallCard.tsx';
 import Spinner from '@ui/Spinner/spinner.tsx';
 import TitleSection from '@ui/TitleSection/titleSection.tsx';
 import { OTHER_WORKS_ITEMS } from '@constants/constants.ts';
-import useArtworks from '../../../../../modsen-art-museum-main/src/hooks/useArtworks.ts';
+import useArtworks from '@hooks/useArtworks.ts';
 import React, { Suspense, memo, useMemo, useState } from 'react';
 import { Grid, Wrapper } from './otherWorks.styles.ts';
 

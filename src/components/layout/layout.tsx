@@ -1,9 +1,9 @@
 import GlobalStyles from '@styles/globalStyles';
 import { theme } from '@styles/theme';
-import { BookmarkProvider } from '../../../../modsen-art-museum-main/src/utils/BookmarkContext/bookmarkContext.tsx';
+import { BookmarkProvider } from '@utils/BookmarkContext/bookmarkContext.tsx';
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import ErrorBoundary from '../../../../modsen-art-museum-main/src/utils/ErrorBoundary/errorBoundary.tsx';
+import ErrorBoundary from '@utils/ErrorBoundary/errorBoundary.tsx';
 import Footer from './Footer/footer.tsx';
 import Header from './Header/header.tsx';
 import Container from './container.tsx';

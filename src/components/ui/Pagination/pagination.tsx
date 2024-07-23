@@ -1,8 +1,8 @@
 import { INITIAL_PAGE_INDEX, MAX_VISIBLE_PAGES } from '@constants/constants';
-import { PaginationProps } from '../../../../../modsen-art-museum-main/src/types/types.ts';
+import { PaginationProps } from '@type/types.ts';
 import React from 'react';
 import { PageButton, PaginationWrapper, RotateImg } from './pagination.styles.ts';
-import arrow from "../../../../../modsen-art-museum-main/src/assets/images/arrow.svg";
+import arrow from "@assets/images/arrow.svg";
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const renderPageButtons = () => {

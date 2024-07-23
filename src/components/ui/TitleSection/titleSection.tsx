@@ -1,4 +1,4 @@
-import { TitleSectionProps } from '../../../../../modsen-art-museum-main/src/types/types.ts';
+import { TitleSectionProps } from '@type/types.ts';
 import React from 'react';
 import { Header, Subtitle, Title } from './titleSection.styles.ts';
 

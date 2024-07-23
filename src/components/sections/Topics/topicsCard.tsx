@@ -1,5 +1,5 @@
 import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
-import { Artwork } from '../../../../../modsen-art-museum-main/src/types/types.ts';
+import { Artwork } from '@type/types.ts';
 import React, { memo, useCallback, useMemo } from 'react';
 import {
   Card,

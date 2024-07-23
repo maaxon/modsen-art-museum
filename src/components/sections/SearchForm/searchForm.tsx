@@ -1,10 +1,10 @@
 import { searchArtworks } from '@api/searchArtworks.ts';
 import SmallCard from '@ui/SmallCard/smallCard.tsx';
 import Spinner from '@ui/Spinner/spinner.tsx';
-import { useDebounce } from '../../../../../modsen-art-museum-main/src/hooks/useDebounce.ts';
-import { Artwork } from '../../../../../modsen-art-museum-main/src/types/types.ts';
-import { sortResults } from '../../../../../modsen-art-museum-main/src/utils/sortUtils/sortUtils.ts';
-import { searchSchema } from '../../../../../modsen-art-museum-main/src/utils/validationSchema/validationSchema.ts';
+import { useDebounce } from '@hooks/useDebounce.ts';
+import { Artwork } from '@type/types.ts';
+import { sortResults } from '@utils/sortUtils/sortUtils.ts';
+import { searchSchema } from '@utils/validationSchema/validationSchema.ts';
 import React, { ChangeEvent, useState } from 'react';
 import * as yup from 'yup';
 import {
