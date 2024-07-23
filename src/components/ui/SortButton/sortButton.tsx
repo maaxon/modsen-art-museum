@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, ArrowUp, SortButtonWrapper } from '@ui/SortButton/sortButton.style.tsx';
-import arrow from "../../../../../modsen-art-museum-main/src/assets/images/arrow.svg";
+import arrow from "@assets/images/arrow.svg";
 
 export interface SortButtonProps{
   title:string,
