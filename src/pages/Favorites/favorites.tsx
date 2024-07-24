@@ -29,14 +29,14 @@ const Favorites: React.FC = () => {
     }
   }, []);
 
-  const handleRemove = useCallback((id: number) => {
+  const handleRemove = (id: number) => {
     setArtworks((prevArtworks) => prevArtworks.filter((artwork) => artwork.id !== id));
 
     const updatedBookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]').filter(
       (bookmarkId: number) => bookmarkId !== id,
     );
     localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
-  }, []);
+  }
 
   const titleSection = useMemo(() => {
     return artworks.length === 0 ? (

@@ -1,7 +1,7 @@
 import Spinner from '@components/ui/Spinner/spinner';
 import { API_URL_DETAIL, IMAGE_URL } from '@constants/constants';
 import { Artwork } from '@type/types';
-import React, { Suspense, lazy, memo, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, lazy, memo, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   AddToFav,
@@ -49,11 +49,11 @@ const Detail: React.FC = () => {
     fetchArtwork();
   }, [id]);
 
-  const renderContent = useMemo(() => {
-    if (!id) return <div>Artwork ID is not provided</div>; // Вывод сообщения, если id не определен
-    if (loading) return <SpinnerBig />;
-    if (error) return <div>{error}</div>;
-    if (!artwork) return <SpinnerBig />;
+
+  if (!id) return <div>Artwork ID is not provided</div>; // Вывод сообщения, если id не определен
+  if (loading) return <SpinnerBig />;
+  if (error) return <div>{error}</div>;
+  if (!artwork) return <SpinnerBig />;
 
     return (
       <Wrapper>
@@ -100,9 +100,9 @@ const Detail: React.FC = () => {
 
       </Wrapper>
     );
-  }, [loading, error, artwork, id]);
 
-  return renderContent;
+
+
 };
 
 export default memo(Detail);

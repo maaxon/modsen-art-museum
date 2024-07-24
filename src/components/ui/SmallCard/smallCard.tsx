@@ -1,11 +1,11 @@
 import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
 import { SmallCardProps } from '@type/types.ts';
-import React, { lazy, memo, useCallback, useMemo } from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
 import { textLengthLimiter } from '@utils/textLenghtLimiter/textLengthLimiter.ts';
 import noImage from '@assets/images/noImage.png'
+import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
 
-const BookmarkButton = lazy(() => import('../BookmarkButton/bookmarkButton.tsx'));
 
 const SmallCard: React.FC<SmallCardProps> = memo(({ artwork, onRemove }) => {
   const { id, title, artist_display, is_public_domain, image_id } = artwork;
@@ -26,9 +26,7 @@ const SmallCard: React.FC<SmallCardProps> = memo(({ artwork, onRemove }) => {
         <Author>{textLengthLimiter(artist_display,30)}</Author>
         <Status>{is_public_domain ? <strong>Public</strong> : <strong>Private</strong>}</Status>
       </Info>
-      <React.Suspense fallback={<div>Loading...</div>}>
         <BookmarkButton id={id} onRemove={handleRemove} />
-      </React.Suspense>
     </Card>
   );
 });
