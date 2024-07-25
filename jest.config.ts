@@ -14,5 +14,6 @@ export default {
     '^@utils/(.*)$': '<rootDir>/src/utils/$1',
     '^@styles/(.*)$': '<rootDir>/src/styles/$1',
     '^@ui/(.*)$': '<rootDir>/src/components/ui/$1',
+    '^@assets/(.*)$': '<rootDir>/src/assets/$1',
   },
 };

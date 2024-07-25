@@ -45,7 +45,7 @@ export const ModsenLogo = styled(Link)`
   width: 165px;
   height: 60px;
   text-decoration: none;
-  background-image: url(../../../../../modsen-art-museum-main/public/logo-modsen.png);
+  background-image: url(/logo-modsen.png);
   background-repeat: no-repeat;
   background-size: contain;
 

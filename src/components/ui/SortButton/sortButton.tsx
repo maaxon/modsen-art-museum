@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowDown, ArrowUp, SortButtonWrapper } from '@ui/SortButton/sortButton.style.tsx';
-import arrow from "@assets/images/arrow.svg";
 
 export interface SortButtonProps{
   title:string,
@@ -22,8 +21,8 @@ const SortButton: React.FC<SortButtonProps> = ({title, upArrowSort, downArrowSor
   return (
     <SortButtonWrapper onClick={clickHandler}>
       <span>{title}</span>
-      {currentSort === upArrowSort && <ArrowUp src={arrow}/>}
-      {currentSort === downArrowSort && <ArrowDown src={arrow}/>}
+      {currentSort === upArrowSort && <ArrowUp src={"/arrow.svg"}/>}
+      {currentSort === downArrowSort && <ArrowDown src={"/arrow.svg"}/>}
     </SortButtonWrapper>
   );
 };

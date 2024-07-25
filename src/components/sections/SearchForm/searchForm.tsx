@@ -1,6 +1,5 @@
 import { searchArtworks } from '@api/searchArtworks.ts';
 import SmallCard from '@ui/SmallCard/smallCard.tsx';
-import Spinner from '@ui/Spinner/spinner.tsx';
 import { useDebounce } from '@hooks/useDebounce.ts';
 import { Artwork } from '@type/types.ts';
 import { sortResults } from '@utils/sortUtils/sortUtils.ts';
@@ -19,6 +18,8 @@ import {
   Wrapper,
 } from './searchForm.styles.ts';
 import SortButton from '@ui/SortButton/sortButton.tsx';
+import SmallCardsLoader from "@ui/SkeletonLoader/SmallCardsLoader.tsx";
+import { SEARCH_ITEMS } from "@constants/constants.ts";
 
 const SearchForm: React.FC = () => {
   const [query, setQuery] = useState<string>('');
@@ -74,7 +75,7 @@ const SearchForm: React.FC = () => {
         <SearchIcon src="search.png" alt="search" onClick={handleSearch} />
       </SearchBox>
       {error && <ErrorMessage>{error}</ErrorMessage>}
-      {loading && <Spinner />}
+
       {results.length > 0 && (
         <SortBox>
           <MarginRight>
@@ -94,6 +95,7 @@ const SearchForm: React.FC = () => {
         </SortBox>
       )}
       <Results>
+        {loading && <SmallCardsLoader itemsCount={SEARCH_ITEMS}/>}
         {results.map((artwork) => (
           <SmallCard key={artwork.id} artwork={artwork} />
         ))}

@@ -3,7 +3,7 @@ import { SmallCardProps } from '@type/types.ts';
 import React, { memo, useCallback, useMemo } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
 import { textLengthLimiter } from '@utils/textLenghtLimiter/textLengthLimiter.ts';
-import noImage from '@assets/images/noImage.png'
+//import noImage from '@assets/images/noImage.png'
 import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
 
 
@@ -20,7 +20,7 @@ const SmallCard: React.FC<SmallCardProps> = memo(({ artwork, onRemove }) => {
 
   return (
     <Card to={`${DETAIL_PATH}/${id}`} data-testid="favorites-link">
-      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl} alt={'img_card'} /> : <Image src={noImage} alt={'no_img'}/>}</ImagePlaceholder>
+      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl} alt={'img_card'} /> : "no image"}</ImagePlaceholder>
       <Info>
         <Title>{textLengthLimiter(title,40)}</Title>
         <Author>{textLengthLimiter(artist_display,30)}</Author>

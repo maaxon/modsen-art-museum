@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import BookmarkButton from '../bookmarkButton.tsx';
 
 // Mock the useBookmarks hook
-jest.mock('@utils/bookmarkContext', () => ({
+jest.mock('@utils/BookmarkContext/bookmarkContext', () => ({
   useBookmarks: jest.fn(),
 }));
 
