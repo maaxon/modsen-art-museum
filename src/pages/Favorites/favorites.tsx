@@ -1,7 +1,7 @@
 import { fetchFavoritesArtworks } from '@api/favoritesApi';
 import TitleSection from '@components/ui/TitleSection/titleSection';
 import { Artwork } from '@type/types';
-import React, { lazy, memo, useCallback, useEffect, useMemo, useState } from 'react';
+import React, { lazy, useCallback, useEffect, useState } from 'react';
 import { Bookmark, Grid, Heading, Highlight } from './favorites.styles';
 import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
 
@@ -38,13 +38,6 @@ const Favorites: React.FC = () => {
     localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
   }
 
-  const titleSection = useMemo(() => {
-    return artworks.length === 0 ? (
-      <TitleSection subtitle={'Saved by you'} title={'You have no favorite artworks yet.'} />
-    ) : (
-      <TitleSection subtitle={'Saved by you'} title={'Your favorites list'} />
-    );
-  }, [artworks.length]);
 
   if (loading) {
     return <SpinnerBig />;
@@ -62,7 +55,11 @@ const Favorites: React.FC = () => {
           <Bookmark src="bookmark.svg" alt="bookmark" />
           <div>Favorites</div>
         </Highlight>
-        {titleSection}
+        {artworks.length === 0 ?
+            <TitleSection subtitle={'Saved by you'} title={'You have no favorite artworks yet.'} />
+              :
+            <TitleSection subtitle={'Saved by you'} title={'Your favorites list'} />
+        }
       </Heading>
 
       <Grid>
@@ -74,4 +71,4 @@ const Favorites: React.FC = () => {
   );
 };
 
-export default memo(Favorites);
+export default Favorites;

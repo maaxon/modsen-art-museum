@@ -1,6 +1,6 @@
 import GlobalStyles from '@styles/globalStyles';
 import { theme } from '@styles/theme';
-import { BookmarkProvider } from '@utils/BookmarkContext/bookmarkContext.tsx';
+import { BookmarkProvider } from '../../context/BookmarkContext/bookmarkContext.tsx';
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import ErrorBoundary from '@utils/ErrorBoundary/errorBoundary.tsx';

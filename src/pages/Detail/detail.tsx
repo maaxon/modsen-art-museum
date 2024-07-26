@@ -1,7 +1,7 @@
 import Spinner from '@components/ui/Spinner/spinner';
 import { API_URL_DETAIL, IMAGE_URL } from '@constants/constants';
 import { Artwork } from '@type/types';
-import React, { Suspense, lazy, memo, useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   AddToFav,
@@ -19,8 +19,9 @@ import {
   Wrapper,
 } from './detail.styles';
 import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
+import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
 
-const BookmarkButton = lazy(() => import('@components/ui/BookmarkButton/bookmarkButton'));
+
 
 const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -105,4 +106,4 @@ const Detail: React.FC = () => {
 
 };
 
-export default memo(Detail);
+export default Detail;
