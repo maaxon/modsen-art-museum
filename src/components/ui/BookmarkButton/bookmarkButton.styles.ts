@@ -9,6 +9,7 @@ export const Circle = styled.div`
   border-radius: 50%;
   cursor: pointer;
   background-color: #F9F9F9;
+
   &:hover {
     background-color: #FBD7B24D;
   }

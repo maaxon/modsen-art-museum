@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-import { BookmarkProvider } from '../../../../context/BookmarkContext/bookmarkContext.tsx';
+import { BookmarkProvider } from '@context/BookmarkContext/bookmarkContext.tsx';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '@styles/theme.ts';
 import SmallCard from '../smallCard.tsx';

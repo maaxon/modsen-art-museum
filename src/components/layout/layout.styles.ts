@@ -8,6 +8,6 @@ export const PageWrapper = styled.div`
 
 export const ContentWrapper = styled.main`
   flex: 1;
-  padding: ${({ theme }) => theme.spacing.small};
-  background-color: ${({ theme }) => theme.colors.background};
+  padding: ${({theme}) => theme.spacing.small};
+  background-color: ${({theme}) => theme.colors.background};
 `;

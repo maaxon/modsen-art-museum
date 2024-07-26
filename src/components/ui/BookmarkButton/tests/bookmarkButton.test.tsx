@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
-import { useBookmarks } from '../../../../context/BookmarkContext/bookmarkContext.tsx';
 import { ThemeProvider } from 'styled-components';
 import BookmarkButton from '../bookmarkButton.tsx';
+import {useBookmarks} from "@context/BookmarkContext/bookmarkContext.tsx";
 
 // Mock the useBookmarks hook
-jest.mock('@utils/BookmarkContext/bookmarkContext', () => ({
+jest.mock('@context/BookmarkContext/bookmarkContext', () => ({
   useBookmarks: jest.fn(),
 }));
 

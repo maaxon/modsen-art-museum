@@ -1,6 +1,7 @@
-import { useBookmarks } from '../../../context/BookmarkContext/bookmarkContext.tsx';
+
 import React, { useCallback, useEffect, useState } from 'react';
 import { BookmarkIcon, Circle } from './bookmarkButton.styles.ts';
+import {useBookmarks} from "@context/BookmarkContext/bookmarkContext.tsx";
 
 interface BookmarkButtonProps {
   id: number;

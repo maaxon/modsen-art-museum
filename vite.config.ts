@@ -1,10 +1,7 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-
-// https://vitejs.dev/config/
 import { fileURLToPath, URL } from "url";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -21,6 +18,7 @@ export default defineConfig({
       "@styles": fileURLToPath(new URL("./src/styles", import.meta.url)),
       "@ui": fileURLToPath(new URL("./src/components/ui", import.meta.url)),
       "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+      "@context": fileURLToPath(new URL("./src/context", import.meta.url))
     },
   },
 });
