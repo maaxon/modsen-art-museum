@@ -8,11 +8,6 @@ export const searchArtworks = async (query: string): Promise<Artwork[]> => {
         query,
       )}&fields=id,title,image_id,artist_display,is_public_domain`,
     );
-
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-
     const data = await response.json();
     return data.data;
   } catch (error) {

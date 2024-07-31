@@ -1,12 +1,7 @@
 import Spinner from '@components/ui/Spinner/spinner';
-<<<<<<< Updated upstream
-import { API_URL_DETAIL, IMAGE_URL } from '@constants/constants';
-import { Artwork } from '@type/types';
-import React, { Suspense, useEffect, useState } from 'react';
-=======
 import { IMAGE_URL } from '@constants/constants';
 import { Suspense } from 'react';
->>>>>>> Stashed changes
+
 import { useParams } from 'react-router-dom';
 import {
   AddToFav,
@@ -25,35 +20,15 @@ import {
 } from './detail.styles';
 import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
 import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
+import {useArtwork} from "@hooks/useAtrwork.ts";
 
 
 
 const Detail = () => {
   const { id } = useParams<{ id: string }>();
-  const [artwork, setArtwork] = useState<Artwork | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string>('');
 
-  useEffect(() => {
-    if (!id) {
-      setError('Artwork ID is not provided');
-      setLoading(false);
-      return;
-    }
+  const {artwork,loading,error} = useArtwork(id);
 
-    const fetchArtwork = async () => {
-      try {
-        const response = await fetch(API_URL_DETAIL(id));
-        const data = await response.json();
-        setArtwork(data.data);
-      } catch (err) {
-        setError('Failed to fetch artwork details');
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchArtwork();
-  }, [id]);
 
 
   if (!id) return <div>Artwork ID is not provided</div>; // Вывод сообщения, если id не определен

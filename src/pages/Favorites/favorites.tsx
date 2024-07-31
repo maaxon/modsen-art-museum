@@ -1,52 +1,15 @@
-import { fetchFavoritesArtworks } from '@api/favoritesApi';
 import TitleSection from '@components/ui/TitleSection/titleSection';
-<<<<<<< Updated upstream
-import { Artwork } from '@type/types';
-import React, { lazy, useCallback, useEffect, useState } from 'react';
-=======
-import  { lazy} from 'react';
->>>>>>> Stashed changes
+import React, { lazy} from 'react';
+
 import { Bookmark, Grid, Heading, Highlight } from './favorites.styles';
 import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
+import {useFavorites} from "@hooks/useFavorites.ts";
 
 const SmallCard = lazy(() => import('@components/ui/SmallCard/smallCard'));
 
-<<<<<<< Updated upstream
+
 const Favorites: React.FC = () => {
-  const [artworks, setArtworks] = useState<Artwork[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
-    getArtworks(bookmarks);
-  }, []);
-
-  const getArtworks = useCallback(async (ids: number[]) => {
-    try {
-      const artworks = await fetchFavoritesArtworks(ids);
-      setArtworks(artworks);
-      setLoading(false);
-    } catch (err) {
-      const errorMessage = (err as Error).message;
-      setError(errorMessage);
-      setLoading(false);
-    }
-  }, []);
-
-  const handleRemove = (id: number) => {
-    setArtworks((prevArtworks) => prevArtworks.filter((artwork) => artwork.id !== id));
-
-    const updatedBookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]').filter(
-      (bookmarkId: number) => bookmarkId !== id,
-    );
-    localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
-  }
-=======
-const Favorites = () => {
   const {artworks,loading,error,handleRemove} = useFavorites();
->>>>>>> Stashed changes
-
 
   if (loading) {
     return <SpinnerBig />;
