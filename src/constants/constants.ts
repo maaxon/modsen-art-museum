@@ -19,7 +19,7 @@ export const DETAIL_PATH = '/detail';
 
 export const IMAGE_URL = (image_id: string) => `${BASE_URL}/${image_id}/full/843,/0/default.jpg`;
 
-export const API_URL_DETAIL = (id: string) => `https://api.artic.edu/api/v1/artworks/${id}`;
+export const API_URL_DETAIL = (id: string | undefined) => `https://api.artic.edu/api/v1/artworks/${id}`;
 
 export const API_BASE_URL = 'https://api.artic.edu/api/v1';
 export const ARTWORK_ENDPOINT = '/artworks/';
