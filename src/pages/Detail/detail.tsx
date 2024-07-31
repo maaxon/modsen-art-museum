@@ -1,4 +1,4 @@
-import Spinner from '@components/ui/Spinner/spinner';
+import Spinner from '@components/Spinner/spinner';
 import { IMAGE_URL } from '@constants/constants';
 import { Suspense } from 'react';
 
@@ -18,8 +18,8 @@ import {
   Title,
   Wrapper,
 } from './detail.styles';
-import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
-import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
+import SpinnerBig from '@components/Spinner/spinnerBig.tsx';
+import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
 import {useArtwork} from "@hooks/useAtrwork.ts";
 
 

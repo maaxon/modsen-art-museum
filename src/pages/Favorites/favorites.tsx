@@ -1,14 +1,13 @@
-import TitleSection from '@components/ui/TitleSection/titleSection';
-import React, { lazy} from 'react';
+import TitleSection from '@components/TitleSection/titleSection';
 
 import { Bookmark, Grid, Heading, Highlight } from './favorites.styles';
-import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
+import SpinnerBig from '@components/Spinner/spinnerBig.tsx';
 import {useFavorites} from "@hooks/useFavorites.ts";
+import SmallCard from "@components/SmallCard/smallCard.tsx";
 
-const SmallCard = lazy(() => import('@components/ui/SmallCard/smallCard'));
 
 
-const Favorites: React.FC = () => {
+const Favorites = () => {
   const {artworks,loading,error,handleRemove} = useFavorites();
 
   if (loading) {

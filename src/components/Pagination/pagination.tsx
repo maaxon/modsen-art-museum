@@ -1,4 +1,4 @@
-import { INITIAL_PAGE_INDEX, MAX_VISIBLE_PAGES } from '@constants/constants';
+import { INITIAL_PAGE_INDEX, MAX_VISIBLE_PAGES } from '@constants/constants.ts';
 import { PaginationProps } from '@type/types.ts';
 import React from 'react';
 import { PageButton, PaginationWrapper, RotateImg } from './pagination.styles.ts';

@@ -1,4 +1,4 @@
-import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
+import { DETAIL_PATH, IMAGE_URL } from '@constants/constants.ts';
 import { Artwork } from '@type/types.ts';
 import React, { memo, useCallback } from 'react';
 import {
@@ -11,7 +11,7 @@ import {
   Image,
   ImagePlaceholder,
 } from './topics.styles.ts';
-import BookmarkButton from '@ui/BookmarkButton/bookmarkButton.tsx';
+import BookmarkButton from '@components/BookmarkButton/bookmarkButton.tsx';
 
 interface TopicsCardProps {
   artwork: Artwork;

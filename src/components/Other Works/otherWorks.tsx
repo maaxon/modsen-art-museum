@@ -1,10 +1,10 @@
-import SmallCard from '@ui/SmallCard/smallCard.tsx';
-import TitleSection from '@ui/TitleSection/titleSection.tsx';
+import SmallCard from '@components/SmallCard/smallCard.tsx';
+import TitleSection from '@components/TitleSection/titleSection.tsx';
 import { OTHER_WORKS_ITEMS } from '@constants/constants.ts';
 import useArtworks from '@hooks/useArtworks.ts';
-import React, { useState } from 'react';
+import React, {memo, useState} from 'react';
 import { Grid, Wrapper } from './otherWorks.styles.ts';
-import SmallCardsLoader from "@ui/SkeletonLoader/SmallCardsLoader.tsx";
+import SmallCardsLoader from "@components/SkeletonLoader/SmallCardsLoader.tsx";
 
 const OtherWorks: React.FC = () => {
   const [currentPage] = useState(1);
@@ -26,4 +26,4 @@ const OtherWorks: React.FC = () => {
   );
 };
 
-export default OtherWorks;
+export default memo(OtherWorks);

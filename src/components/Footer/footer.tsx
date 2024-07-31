@@ -1,5 +1,5 @@
-import Container from '../container.tsx';
 import { FooterDiv, FooterWrapper, IconLogo, LogoWrapper, ModsenLogo, Title } from './footer.styles.ts';
+import Container from "@components/layout/container.tsx";
 
 const Footer = () => {
   return (

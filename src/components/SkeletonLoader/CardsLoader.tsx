@@ -1,4 +1,4 @@
-import { Skeleton } from '@ui/SkeletonLoader/SkeletonLoader.style.ts';
+import { Skeleton } from './SkeletonLoader.style.ts';
 
 const CardsLoader = () => {
   return(

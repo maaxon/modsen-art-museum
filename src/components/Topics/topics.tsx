@@ -1,10 +1,10 @@
-import Pagination from '@ui/Pagination/pagination.tsx';
-import TitleSection from '@ui/TitleSection/titleSection.tsx';
+import Pagination from '@components/Pagination/pagination.tsx';
+import TitleSection from '@components/TitleSection/titleSection.tsx';
 import useArtworks from '@hooks/useArtworks.ts';
-import  {  useState } from 'react';
+import {memo, useState} from 'react';
 import { Gallery, Wrapper } from './topics.styles.ts';
-import CardsLoader from '@ui/SkeletonLoader/CardsLoader.tsx';
-import TopicsCard from '@components/sections/Topics/topicsCard.tsx';
+import CardsLoader from '@components/SkeletonLoader/CardsLoader.tsx';
+import TopicsCard from '@components/Topics/topicsCard.tsx';
 
 
 const Topics = () => {
@@ -32,4 +32,4 @@ const Topics = () => {
   );
 };
 
-export default Topics;
+export default memo(Topics);

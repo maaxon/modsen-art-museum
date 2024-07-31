@@ -1,7 +1,7 @@
-import SmallCard from '@ui/SmallCard/smallCard.tsx';
+import SmallCard from '@components/SmallCard/smallCard.tsx';
 import { useDebounce } from '@hooks/useDebounce.ts';
 import { sortResults } from '@utils/sortUtils/sortUtils.ts';
-import {ChangeEvent, useState} from 'react';
+import {ChangeEvent, memo, useState} from 'react';
 
 import {
   ErrorMessage,
@@ -14,8 +14,8 @@ import {
   SortBox,
   Wrapper,
 } from './searchForm.styles.ts';
-import SortButton from '@ui/SortButton/sortButton.tsx';
-import SmallCardsLoader from "@ui/SkeletonLoader/SmallCardsLoader.tsx";
+import SortButton from '@components/SortButton/sortButton.tsx';
+import SmallCardsLoader from "@components/SkeletonLoader/SmallCardsLoader.tsx";
 import { SEARCH_ITEMS } from "@constants/constants.ts";
 import {useSearch} from "@hooks/useSearch.ts";
 
@@ -76,4 +76,4 @@ const SearchForm = () => {
   );
 };
 
-export default SearchForm;
+export default memo(SearchForm);

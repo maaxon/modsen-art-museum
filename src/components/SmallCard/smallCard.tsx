@@ -4,10 +4,10 @@ import React, { memo, useCallback, useMemo } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
 import { textLengthLimiter } from '@utils/textLenghtLimiter/textLengthLimiter.ts';
 //import noImage from '@assets/images/noImage.png'
-import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
+import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
 
 
-const SmallCard: React.FC<SmallCardProps> = memo(({ artwork, onRemove }) => {
+const SmallCard: React.FC<SmallCardProps> = ({ artwork, onRemove }) => {
   const { id, title, artist_display, is_public_domain, image_id } = artwork;
 
   const imageUrl = useMemo(() => (image_id ? IMAGE_URL(image_id) : null), [image_id]);
@@ -29,6 +29,6 @@ const SmallCard: React.FC<SmallCardProps> = memo(({ artwork, onRemove }) => {
         <BookmarkButton id={id} onRemove={handleRemove} />
     </Card>
   );
-});
+};
 
-export default SmallCard;
+export default memo(SmallCard);

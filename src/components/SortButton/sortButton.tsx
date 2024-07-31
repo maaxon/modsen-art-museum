@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, ArrowUp, SortButtonWrapper } from '@ui/SortButton/sortButton.style.tsx';
+import { ArrowDown, ArrowUp, SortButtonWrapper } from '@components/SortButton/sortButton.style.tsx';
 
 export interface SortButtonProps{
   title:string,
