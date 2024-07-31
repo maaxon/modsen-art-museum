@@ -1,18 +1,18 @@
 import { useEffect, useState} from "react";
 import {Artwork} from "@type/types.ts";
 import {fetchFavoritesArtworks} from "@api/favoritesApi.ts";
+import {useBookmarks} from "@context/BookmarkContext/bookmarkContext.tsx";
 
 export const useFavorites = () =>{
     const [artworks, setArtworks] = useState<Artwork[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
+    const { bookmarks, removeBookmark } = useBookmarks();
 
     useEffect(() => {
-        const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
-
-        const getArtworks = async (ids: number[]) => {
+        const getArtworks = async (ids: Set<number>) => {
             try {
-                const artworks = await fetchFavoritesArtworks(ids);
+                const artworks = await fetchFavoritesArtworks(Array.from(ids));
                 setArtworks(artworks);
                 setLoading(false);
             } catch (err) {
@@ -29,11 +29,7 @@ export const useFavorites = () =>{
 
     const handleRemove = (id: number) => {
         setArtworks((prevArtworks) => prevArtworks.filter((artwork) => artwork.id !== id));
-
-        const updatedBookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]').filter(
-            (bookmarkId: number) => bookmarkId !== id,
-        );
-        localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
+        removeBookmark(id);
     }
 
     return {artworks,loading,error,handleRemove}

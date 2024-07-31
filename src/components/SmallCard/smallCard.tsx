@@ -10,7 +10,7 @@ import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
 const SmallCard: React.FC<SmallCardProps> = ({ artwork, onRemove }) => {
   const { id, title, artist_display, is_public_domain, image_id } = artwork;
 
-  const imageUrl = useMemo(() => (image_id ? IMAGE_URL(image_id) : null), [image_id]);
+  const imageUrl = () => (image_id ? IMAGE_URL(image_id) : undefined);
 
   const handleRemove = useCallback(() => {
     if (onRemove) {
@@ -20,7 +20,7 @@ const SmallCard: React.FC<SmallCardProps> = ({ artwork, onRemove }) => {
 
   return (
     <Card to={`${DETAIL_PATH}/${id}`} data-testid="favorites-link">
-      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl} alt={'img_card'} /> : "no image"}</ImagePlaceholder>
+      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl()} alt={'img_card'} /> : "./noImage.png"}</ImagePlaceholder>
       <Info>
         <Title>{textLengthLimiter(title,40)}</Title>
         <Author>{textLengthLimiter(artist_display,30)}</Author>
