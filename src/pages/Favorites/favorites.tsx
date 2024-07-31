@@ -1,12 +1,17 @@
 import { fetchFavoritesArtworks } from '@api/favoritesApi';
 import TitleSection from '@components/ui/TitleSection/titleSection';
+<<<<<<< Updated upstream
 import { Artwork } from '@type/types';
 import React, { lazy, useCallback, useEffect, useState } from 'react';
+=======
+import  { lazy} from 'react';
+>>>>>>> Stashed changes
 import { Bookmark, Grid, Heading, Highlight } from './favorites.styles';
 import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
 
 const SmallCard = lazy(() => import('@components/ui/SmallCard/smallCard'));
 
+<<<<<<< Updated upstream
 const Favorites: React.FC = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
   const [loading, setLoading] = useState(true);
@@ -37,6 +42,10 @@ const Favorites: React.FC = () => {
     );
     localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
   }
+=======
+const Favorites = () => {
+  const {artworks,loading,error,handleRemove} = useFavorites();
+>>>>>>> Stashed changes
 
 
   if (loading) {

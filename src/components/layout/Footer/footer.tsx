@@ -1,8 +1,7 @@
-import React from 'react';
 import Container from '../container.tsx';
 import { FooterDiv, FooterWrapper, IconLogo, LogoWrapper, ModsenLogo, Title } from './footer.styles.ts';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <FooterDiv>
       <Container>

@@ -1,7 +1,12 @@
 import Spinner from '@components/ui/Spinner/spinner';
+<<<<<<< Updated upstream
 import { API_URL_DETAIL, IMAGE_URL } from '@constants/constants';
 import { Artwork } from '@type/types';
 import React, { Suspense, useEffect, useState } from 'react';
+=======
+import { IMAGE_URL } from '@constants/constants';
+import { Suspense } from 'react';
+>>>>>>> Stashed changes
 import { useParams } from 'react-router-dom';
 import {
   AddToFav,
@@ -23,7 +28,7 @@ import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
 
 
 
-const Detail: React.FC = () => {
+const Detail = () => {
   const { id } = useParams<{ id: string }>();
   const [artwork, setArtwork] = useState<Artwork | null>(null);
   const [loading, setLoading] = useState<boolean>(true);

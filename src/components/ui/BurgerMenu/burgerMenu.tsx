@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
   BurgerIcon,
@@ -11,7 +11,7 @@ import {
   SideMenuContent,
 } from './burgerMenu.styles.ts';
 
-const BurgerMenu: React.FC = () => {
+const BurgerMenu = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

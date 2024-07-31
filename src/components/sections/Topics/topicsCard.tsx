@@ -1,6 +1,6 @@
 import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
 import { Artwork } from '@type/types.ts';
-import React, { memo, useCallback, useMemo } from 'react';
+import React, { memo, useCallback } from 'react';
 import {
   Card,
   CardAuthor,
@@ -18,15 +18,15 @@ interface TopicsCardProps {
 }
 
 const TopicsCard: React.FC<TopicsCardProps> = ({ artwork }) => {
-  const imageUrl = useMemo(() => {
-    return artwork.image_id ? IMAGE_URL(artwork.image_id) : null;
-  }, [artwork.image_id]);
+  const imageUrl = () => {
+    return artwork.image_id ? IMAGE_URL(artwork.image_id) : undefined;
+  };
 
   const bookmarkButtonMemo = useCallback(() => <BookmarkButton id={artwork.id} />, [artwork.id]);
 
   return (
     <Card to={`${DETAIL_PATH}/${artwork.id}`}>
-      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl} alt={artwork.title} /> : "No Image"}</ImagePlaceholder>
+      <ImagePlaceholder>{imageUrl ? <Image src={imageUrl()} alt={artwork.title} /> : "No Image"}</ImagePlaceholder>
       <CardContent>
         <CardTitle>{artwork.title}</CardTitle>
         <CardAuthor>{artwork.artist_title}</CardAuthor>

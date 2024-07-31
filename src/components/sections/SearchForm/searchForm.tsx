@@ -3,9 +3,13 @@ import SmallCard from '@ui/SmallCard/smallCard.tsx';
 import { useDebounce } from '@hooks/useDebounce.ts';
 import { Artwork } from '@type/types.ts';
 import { sortResults } from '@utils/sortUtils/sortUtils.ts';
+<<<<<<< Updated upstream
 import { searchSchema } from '@utils/validationSchema/validationSchema.ts';
 import React, { ChangeEvent, useState } from 'react';
 import * as yup from 'yup';
+=======
+import {ChangeEvent, useState} from 'react';
+>>>>>>> Stashed changes
 import {
   ErrorMessage,
   Heading,
@@ -21,7 +25,7 @@ import SortButton from '@ui/SortButton/sortButton.tsx';
 import SmallCardsLoader from "@ui/SkeletonLoader/SmallCardsLoader.tsx";
 import { SEARCH_ITEMS } from "@constants/constants.ts";
 
-const SearchForm: React.FC = () => {
+const SearchForm = () => {
   const [query, setQuery] = useState<string>('');
   const [results, setResults] = useState<Artwork[]>([]);
   const [error, setError] = useState<string>('');

@@ -1,7 +1,6 @@
-import React from 'react';
 import { SpinnerWrapper, StyledSpinner } from './spinner.styles.ts';
 
-const Spinner: React.FC = () => {
+const Spinner = () => {
   return (
     <SpinnerWrapper data-testid="spinner-wrapper">
       <StyledSpinner data-testid="spinner" />

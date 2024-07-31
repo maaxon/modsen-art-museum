@@ -1,7 +1,6 @@
-import React from 'react';
 import { Skeleton } from '@ui/SkeletonLoader/SkeletonLoader.style.ts';
 
-const CardsLoader: React.FC = () => {
+const CardsLoader = () => {
   return(
     <>
       <Skeleton width={"100%"} height={"32.125rem"}/>

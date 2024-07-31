@@ -7,10 +7,9 @@ import Footer from './Footer/footer.tsx';
 import Header from './Header/header.tsx';
 import Container from './container.tsx';
 import {ContentWrapper, PageWrapper} from './layout.styles.ts';
-import React from "react";
 import {BookmarkProvider} from "@context/BookmarkContext/bookmarkContext.tsx";
 
-const Layout: React.FC = () => {
+const Layout = () => {
     return (
         <ErrorBoundary>
             <ThemeProvider theme={theme}>
