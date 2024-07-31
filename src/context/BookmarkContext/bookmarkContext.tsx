@@ -1,6 +1,6 @@
-import {BOOKMARKS_LOCAL_KEY} from '@constants/constants.ts';
 import {BookmarkContextProps} from '@type/types.ts';
 import React, {createContext, useContext, useEffect, useState} from 'react';
+import {getBookmarks} from "@utils/bookmarksStorage/bookmarksStorage.ts";
 
 const BookmarkContext = createContext<BookmarkContextProps | undefined>(undefined);
 
@@ -8,7 +8,7 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
     const [bookmarks, setBookmarks] = useState<Set<number>>(new Set());
 
     useEffect(() => {
-        const storedBookmarks = JSON.parse(localStorage.getItem(BOOKMARKS_LOCAL_KEY) || '[]');
+        const storedBookmarks = getBookmarks();
         setBookmarks(new Set(storedBookmarks));
     }, []);
 
@@ -16,7 +16,7 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
         setBookmarks((prevBookmarks) => {
             const newBookmarks = new Set(prevBookmarks);
             newBookmarks.add(id);
-            localStorage.setItem(BOOKMARKS_LOCAL_KEY, JSON.stringify(Array.from(newBookmarks)));
+            setBookmarks(newBookmarks)
             return newBookmarks;
         });
     };
@@ -25,7 +25,7 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
         setBookmarks((prevBookmarks) => {
             const newBookmarks = new Set(prevBookmarks);
             newBookmarks.delete(id);
-            localStorage.setItem(BOOKMARKS_LOCAL_KEY, JSON.stringify(Array.from(newBookmarks)));
+            setBookmarks(newBookmarks)
             return newBookmarks;
         });
     };

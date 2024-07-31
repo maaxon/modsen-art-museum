@@ -1,29 +1,24 @@
-import Spinner from '@components/ui/Spinner/spinner';
+import Spinner from '@components/Spinner/spinner';
 import { IMAGE_URL } from '@constants/constants';
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
+
 import { useParams } from 'react-router-dom';
 import {
   AddToFav,
-  Author,
-  Date,
   Content,
   Image,
   ImagePlaceholder,
-  InfoItem,
-  InfoList,
   Mock,
-  Overview,
-  SectionTitle,
-  Title,
   Wrapper,
 } from './detail.styles';
-import SpinnerBig from '@ui/Spinner/spinnerBig.tsx';
-import BookmarkButton from "@ui/BookmarkButton/bookmarkButton.tsx";
+import SpinnerBig from '@components/Spinner/spinnerBig.tsx';
+import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
 import {useArtwork} from "@hooks/useAtrwork.ts";
+import {ArtworkInfo} from "@components/ArtworkInfo/ArtworkInfo.tsx";
 
 
 
-const Detail: React.FC = () => {
+const Detail = () => {
   const { id } = useParams<{ id: string }>();
 
   const {artwork,loading,error} = useArtwork(id);
@@ -53,29 +48,7 @@ const Detail: React.FC = () => {
           </AddToFav>
         </ImagePlaceholder>
         <Content>
-          <div>
-            <Title>{artwork.title}</Title>
-            <Author>{artwork.artist_title}</Author>
-            <Date>1535-45</Date>
-          </div>
-          <Overview>
-            <SectionTitle>Overview</SectionTitle>
-            <InfoList>
-              <InfoItem>
-                <strong>Artist nationality:</strong> {artwork.artist_display}
-              </InfoItem>
-              <InfoItem>
-                <strong>Dimensions:</strong> Sheet: {artwork.dimensions}
-              </InfoItem>
-              <InfoItem>
-                <strong>Credit Line:</strong> {artwork.credit_line}
-              </InfoItem>
-              <InfoItem>
-                <strong>Repository:</strong> {artwork.department_title}
-              </InfoItem>
-              <InfoItem>{artwork.is_public_domain ? <b>Public</b> : <b>Private</b>}</InfoItem>
-            </InfoList>
-          </Overview>
+          <ArtworkInfo artwork={artwork}/>
         </Content>
 
       </Wrapper>
