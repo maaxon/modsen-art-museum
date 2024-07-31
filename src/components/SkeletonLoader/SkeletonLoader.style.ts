@@ -12,7 +12,7 @@ export interface SkeletonLoaderProps{
 }
 
 export const Skeleton = styled.div<SkeletonLoaderProps>`
-  background-color: #ededed;
+  background-color:${({ theme }) => theme.colors.skeletonBackground};
   background: linear-gradient(
           100deg,
           rgba(255, 255, 255, 0) 40%,

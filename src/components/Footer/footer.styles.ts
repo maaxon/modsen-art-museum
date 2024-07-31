@@ -6,7 +6,7 @@ export const FooterDiv = styled.footer`
   margin-top: auto;
 `;
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing.footerPadding} 0;
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@ export const LogoWrapper = styled(Link)`
   text-decoration: none;
 `;
 
-export const IconLogo = styled.div`
+export const IconLogo = styled.section`
   width: 48px;
   height: 48px;
   background-image: url(/logo.png);

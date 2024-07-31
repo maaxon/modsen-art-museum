@@ -16,7 +16,11 @@ export const theme = {
     imagePlaceholder: '#e0e0e0',
     imagePlaceholderText: '#999',
     cardStatus: '#666',
-    error:'#842029'
+    error:'#842029',
+    bookmark: '#F9F9F9',
+    bookmarkHover:'#FBD7B24D',
+    overlay:'#00000080',
+    skeletonBackground:' #ededed'
   },
   fonts: {
     main: 'Roboto, sans-serif',

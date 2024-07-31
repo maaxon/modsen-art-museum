@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   padding: 20px 0 100px 0;
   text-align: center;
 `;

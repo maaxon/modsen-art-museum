@@ -8,10 +8,10 @@ export const Circle = styled.div`
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: #F9F9F9;
+  background-color: ${({ theme }) => theme.colors.bookmark};
 
   &:hover {
-    background-color: #FBD7B24D;
+    background-color: ${({ theme }) => theme.colors.bookmarkHover};;
   }
 `;
 

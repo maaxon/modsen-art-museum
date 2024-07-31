@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Header = styled.div`
+export const Header = styled.article`
   text-align: center;
   margin-bottom: ${({ theme }) => theme.spacing.small};
 `;

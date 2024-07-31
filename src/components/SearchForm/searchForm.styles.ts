@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,7 +77,7 @@ export const ErrorMessage = styled.div`
   }
 `;
 
-export const SortBox = styled.div`
+export const SortBox = styled.section`
   display: flex;
   align-items: center;
   margin-top: ${({ theme }) => theme.spacing.medium};
@@ -95,7 +95,7 @@ export const MarginRight = styled.label`
 `;
 
 
-export const Results = styled.div`
+export const Results = styled.section`
   margin-top: ${({ theme }) => theme.spacing.small};
   display: grid;
   width: 65%;

@@ -10,7 +10,7 @@ export const HeaderDiv = styled.header`
   position: relative;
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.section`
   padding: ${({ theme }) => theme.spacing.footerPadding} 0;
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@ export const LogoWrapper = styled(Link)`
   text-decoration: none;
 `;
 
-export const IconLogo = styled.div`
+export const IconLogo = styled.section`
   width: 48px;
   height: 48px;
   background-image: url(/logo.png);
@@ -42,7 +42,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const LinkWrapper = styled.div`
+export const LinkWrapper = styled.section`
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.headerText};

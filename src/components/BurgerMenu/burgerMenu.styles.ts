@@ -46,7 +46,7 @@ interface SideMenuProps {
   $isOpen: boolean;
 }
 
-export const SideMenu = styled.div<SideMenuProps>`
+export const SideMenu = styled.aside<SideMenuProps>`
   height: 100%;
   width: ${(props) => (props.$isOpen ? '15.625rem' : '0')};
   position: fixed;
@@ -59,7 +59,7 @@ export const SideMenu = styled.div<SideMenuProps>`
   padding-top: 60px;
 `;
 
-export const SideMenuContent = styled.div`
+export const SideMenuContent = styled.section`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -107,12 +107,12 @@ export const IconBookmark = styled.img`
   color: ${({ theme }) => theme.colors.bookmarkIcon};
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${({ theme }) => theme.colors.overlay};
   z-index: 1;
 `;

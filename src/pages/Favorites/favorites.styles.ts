@@ -21,7 +21,7 @@ export const Highlight = styled.span`
   padding-bottom: ${({ theme }) => theme.spacing.large};
 `;
 
-export const Grid = styled.div`
+export const Grid = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: ${({ theme }) => theme.spacing.medium};

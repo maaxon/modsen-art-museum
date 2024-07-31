@@ -2,7 +2,7 @@ import GlobalStyles from '@styles/globalStyles';
 import {theme} from '@styles/theme';
 import {Outlet} from 'react-router-dom';
 import {ThemeProvider} from 'styled-components';
-import ErrorBoundary from '@utils/ErrorBoundary/errorBoundary.tsx';
+import ErrorBoundary from '@components/ErrorBoundary/errorBoundary.tsx';
 import Footer from '@components/Footer/footer.tsx';
 import Header from '@components/Header/header.tsx';
 import Container from './container.tsx';
