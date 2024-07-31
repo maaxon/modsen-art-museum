@@ -19,7 +19,7 @@ const Topics: React.FC = () => {
     if (loading) return (<CardsLoader/>);
     if (error) return <div>{error}</div>;
     return artworks.map((artwork) => (
-      <TopicsCard artwork={artwork} />
+      <TopicsCard artwork={artwork} key={artwork.id} />
     ));
   };
 

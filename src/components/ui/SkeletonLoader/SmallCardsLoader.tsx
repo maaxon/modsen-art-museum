@@ -7,7 +7,7 @@ export interface SmallCardsLoaderProps {
 
 const SmallCardsLoader: React.FC<SmallCardsLoaderProps> = ({itemsCount}) => {
     return new Array(itemsCount).fill("")
-        .map(()=><Skeleton width={"1fr"} height={"120px"}/>);
+        .map((_,idx)=><Skeleton width={"1fr"} key={Math.random()*idx} height={"120px"}/>);
 }
 
 export default SmallCardsLoader
