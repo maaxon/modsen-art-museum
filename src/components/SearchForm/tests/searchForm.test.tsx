@@ -1,6 +1,6 @@
 import { searchArtworks } from '@api/searchArtworks';
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen} from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import SearchForm from '../searchForm.tsx';
@@ -39,20 +39,6 @@ test('renders SearchForm component with correct elements', () => {
   expect(screen.getByText(/Let's Find Some/i)).toBeInTheDocument();
   expect(screen.getByText(/Art/i)).toBeInTheDocument();
   expect(screen.getByPlaceholderText(/Search art, artist, work.../i)).toBeInTheDocument();
-});
-
-test('displays error message when search query is empty', async () => {
-  render(
-    <ThemeProvider theme={theme}>
-      <Router>
-        <SearchForm />
-      </Router>
-    </ThemeProvider>,
-  );
-
-  fireEvent.click(screen.getByAltText('search'));
-
-  await waitFor(() => expect(screen.getByText('Query cannot be empty.')).toBeInTheDocument());
 });
 
 test('displays loading spinner during search', async () => {

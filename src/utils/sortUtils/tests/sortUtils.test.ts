@@ -10,7 +10,8 @@ describe('sortResults', () => {
       artist_title: 'Leonardo da Vinci',
       image_id: 'image1',
       is_public_domain: true,
-      date: 1503,
+      date_start: 1503,
+      date:1500
     },
     {
       id: 2,
@@ -19,7 +20,8 @@ describe('sortResults', () => {
       artist_title: 'Vincent van Gogh',
       image_id: 'image2',
       is_public_domain: true,
-      date: 1931,
+      date_start: 1931,
+      date:1500
     },
     {
       id: 3,
@@ -28,7 +30,8 @@ describe('sortResults', () => {
       artist_title: 'Salvador Dalí',
       image_id: 'image3',
       is_public_domain: true,
-      date: 1889,
+      date_start: 1889,
+      date:1500
     },
   ];
 
@@ -42,7 +45,8 @@ describe('sortResults', () => {
         artist_title: 'Leonardo da Vinci',
         image_id: 'image1',
         is_public_domain: true,
-        date: 1503,
+        date_start: 1503,
+        date:1500
       },
       {
         id: 3,
@@ -51,7 +55,8 @@ describe('sortResults', () => {
         artist_title: 'Salvador Dalí',
         image_id: 'image3',
         is_public_domain: true,
-        date: 1889,
+        date_start: 1889,
+        date:1500
       },
       {
         id: 2,
@@ -60,7 +65,8 @@ describe('sortResults', () => {
         artist_title: 'Vincent van Gogh',
         image_id: 'image2',
         is_public_domain: true,
-        date: 1931,
+        date_start: 1931,
+        date:1500
       },
     ]);
   });
@@ -75,7 +81,8 @@ describe('sortResults', () => {
         artist_title: 'Vincent van Gogh',
         image_id: 'image2',
         is_public_domain: true,
-        date: 1931,
+        date_start: 1931,
+        date:1500
       },
       {
         id: 3,
@@ -84,7 +91,8 @@ describe('sortResults', () => {
         artist_title: 'Salvador Dalí',
         image_id: 'image3',
         is_public_domain: true,
-        date: 1889,
+        date_start: 1889,
+        date:1500
       },
       {
         id: 1,
@@ -93,7 +101,8 @@ describe('sortResults', () => {
         artist_title: 'Leonardo da Vinci',
         image_id: 'image1',
         is_public_domain: true,
-        date: 1503,
+        date_start: 1503,
+        date:1500
       },
 
     ]);
@@ -109,7 +118,8 @@ describe('sortResults', () => {
         artist_title: 'Leonardo da Vinci',
         image_id: 'image1',
         is_public_domain: true,
-        date: 1503,
+        date_start: 1503,
+        date:1500
       },
       {
         id: 2,
@@ -118,7 +128,8 @@ describe('sortResults', () => {
         artist_title: 'Vincent van Gogh',
         image_id: 'image2',
         is_public_domain: true,
-        date: 1931,
+        date_start: 1931,
+        date:1500
       },
       {
         id: 3,
@@ -127,7 +138,8 @@ describe('sortResults', () => {
         artist_title: 'Salvador Dalí',
         image_id: 'image3',
         is_public_domain: true,
-        date: 1889,
+        date_start: 1889,
+        date:1500
       },
     ]);
   });
@@ -142,7 +154,8 @@ describe('sortResults', () => {
         artist_title: 'Salvador Dalí',
         image_id: 'image3',
         is_public_domain: true,
-        date: 1889,
+        date_start: 1889,
+        date:1500
       },
       {
         id: 2,
@@ -151,7 +164,8 @@ describe('sortResults', () => {
         artist_title: 'Vincent van Gogh',
         image_id: 'image2',
         is_public_domain: true,
-        date: 1931,
+        date_start: 1931,
+        date:1500
       },
       {
         id: 1,
@@ -160,7 +174,8 @@ describe('sortResults', () => {
         artist_title: 'Leonardo da Vinci',
         image_id: 'image1',
         is_public_domain: true,
-        date: 1503,
+        date_start: 1503,
+        date:1500
       },
     ]);
   });

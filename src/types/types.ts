@@ -11,6 +11,7 @@ export interface Artwork {
   department_title?: string;
   is_public_domain: boolean;
   date: number;
+  date_start?:number
 }
 
 export interface ArtContextProps {

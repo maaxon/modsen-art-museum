@@ -6,7 +6,7 @@ export const searchArtworks = async (query: string): Promise<Artwork[]> => {
     const response = await fetch(
       `${API_BASE_URL}${SEARCH_ENDPOINT}?q=${encodeURIComponent(
         query,
-      )}&fields=id,title,image_id,artist_display,is_public_domain`,
+      )}&fields=id,title,image_id,artist_display,is_public_domain,date_start`,
     );
     const data = await response.json();
     return data.data;
