@@ -19,7 +19,7 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
             setStorageBookmarks(newBookmarks)
             return newBookmarks;
         });
-    });
+    },[setBookmarks]);
 
     const removeBookmark = useCallback( (id: number) => {
         setBookmarks((prevBookmarks) => {
@@ -28,7 +28,7 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
             setStorageBookmarks(newBookmarks)
             return newBookmarks;
         });
-    });
+    },[setBookmarks]);
 
     return (
         <BookmarkContext.Provider value={{bookmarks, addBookmark, removeBookmark}}>{children}</BookmarkContext.Provider>

@@ -1,6 +1,6 @@
 import SmallCard from '@components/SmallCard';
 import { useDebounce } from '@hooks/useDebounce.ts';
-import { sortResults } from '@utils/sortUtils';
+import sortResults from '@utils/sortUtils';
 import {ChangeEvent, memo, useState} from 'react';
 
 import {

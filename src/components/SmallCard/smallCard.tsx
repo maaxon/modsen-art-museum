@@ -2,7 +2,7 @@ import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
 import { SmallCardProps } from '@type/types.ts';
 import React, { memo, useCallback } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
-import { textLengthLimiter } from '@utils/textLenghtLimiter';
+import textLengthLimiter from '@utils/textLenghtLimiter';
 import BookmarkButton from "@components/BookmarkButton";
 
 
