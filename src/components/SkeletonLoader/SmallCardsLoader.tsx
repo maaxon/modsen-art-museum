@@ -1,7 +1,7 @@
 import React from "react";
 import {Skeleton} from "./SkeletonLoader.style.ts";
 
-export interface SmallCardsLoaderProps {
+interface SmallCardsLoaderProps {
     itemsCount:number
 }
 

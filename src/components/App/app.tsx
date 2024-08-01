@@ -1,4 +1,4 @@
-import Layout from '@components/layout/layout';
+import Layout from '@components/layout';
 import React, { Suspense } from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {routes} from "@constants/routes.ts";

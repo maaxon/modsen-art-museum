@@ -1,9 +1,9 @@
-import TitleSection from '@components/TitleSection/titleSection';
+import TitleSection from '@components/TitleSection';
 
 import { Bookmark, Grid, Heading, Highlight } from './favorites.styles';
-import SpinnerBig from '@components/Spinner/spinnerBig.tsx';
+import SpinnerBig from '@components/Spinner';
 import {useFavorites} from "@hooks/useFavorites.ts";
-import SmallCard from "@components/SmallCard/smallCard.tsx";
+import SmallCard from "@components/SmallCard";
 
 
 

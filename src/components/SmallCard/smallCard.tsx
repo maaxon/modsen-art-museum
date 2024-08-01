@@ -2,8 +2,8 @@ import { DETAIL_PATH, IMAGE_URL } from '@constants/constants';
 import { SmallCardProps } from '@type/types.ts';
 import React, { memo, useCallback } from 'react';
 import { Author, Card, Image, ImagePlaceholder, Info, Status, Title } from './smallCard.styles.ts';
-import { textLengthLimiter } from '@utils/textLenghtLimiter/textLengthLimiter.ts';
-import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
+import textLengthLimiter from '@utils/textLenghtLimiter';
+import BookmarkButton from "@components/BookmarkButton";
 
 
 const SmallCard: React.FC<SmallCardProps> = ({ artwork, onRemove }) => {

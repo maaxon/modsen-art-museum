@@ -1,4 +1,4 @@
-import {searchSchema} from "@utils/validationSchema/validationSchema.ts";
+import searchSchema from "@utils/validationSchema";
 import {searchArtworks} from "@api/searchArtworks.ts";
 import * as yup from "yup";
 import {useEffect, useState} from "react";

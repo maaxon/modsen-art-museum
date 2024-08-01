@@ -1,6 +1,6 @@
 import {BookmarkContextProps} from '@type/types.ts';
-import React, {createContext, useContext, useEffect, useState} from 'react';
-import {getBookmarks} from "@utils/bookmarksStorage/bookmarksStorage.ts";
+import React, {createContext, useCallback, useContext, useEffect, useState} from 'react';
+import {getBookmarks,setBookmarks as setStorageBookmarks} from "@utils/bookmarksStorage/";
 
 const BookmarkContext = createContext<BookmarkContextProps | undefined>(undefined);
 
@@ -12,23 +12,23 @@ export const BookmarkProvider: React.FC<React.PropsWithChildren<{}>> = ({childre
         setBookmarks(new Set(storedBookmarks));
     }, []);
 
-    const addBookmark = (id: number) => {
+    const addBookmark = useCallback((id: number) => {
         setBookmarks((prevBookmarks) => {
             const newBookmarks = new Set(prevBookmarks);
             newBookmarks.add(id);
-            setBookmarks(newBookmarks)
+            setStorageBookmarks(newBookmarks)
             return newBookmarks;
         });
-    };
+    },[setBookmarks]);
 
-    const removeBookmark = (id: number) => {
+    const removeBookmark = useCallback( (id: number) => {
         setBookmarks((prevBookmarks) => {
             const newBookmarks = new Set(prevBookmarks);
             newBookmarks.delete(id);
-            setBookmarks(newBookmarks)
+            setStorageBookmarks(newBookmarks)
             return newBookmarks;
         });
-    };
+    },[setBookmarks]);
 
     return (
         <BookmarkContext.Provider value={{bookmarks, addBookmark, removeBookmark}}>{children}</BookmarkContext.Provider>

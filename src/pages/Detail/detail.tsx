@@ -1,6 +1,4 @@
-import Spinner from '@components/Spinner/spinner';
 import { IMAGE_URL } from '@constants/constants';
-import { Suspense } from 'react';
 
 import { useParams } from 'react-router-dom';
 import {
@@ -11,10 +9,10 @@ import {
   Mock,
   Wrapper,
 } from './detail.styles';
-import SpinnerBig from '@components/Spinner/spinnerBig.tsx';
-import BookmarkButton from "@components/BookmarkButton/bookmarkButton.tsx";
+import SpinnerBig from '@components/Spinner';
+import BookmarkButton from "@components/BookmarkButton";
 import {useArtwork} from "@hooks/useAtrwork.ts";
-import {ArtworkInfo} from "@components/ArtworkInfo/ArtworkInfo.tsx";
+import ArtworkInfo from "@components/ArtworkInfo";
 
 
 
@@ -42,9 +40,7 @@ const Detail = () => {
             </Mock>
           )}
           <AddToFav>
-            <Suspense fallback={<Spinner />}>
               <BookmarkButton id={artwork.id} />
-            </Suspense>
           </AddToFav>
         </ImagePlaceholder>
         <Content>
