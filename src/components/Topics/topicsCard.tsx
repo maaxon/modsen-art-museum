@@ -11,7 +11,7 @@ import {
   Image,
   ImagePlaceholder,
 } from './topics.styles.ts';
-import BookmarkButton from '@components/BookmarkButton/bookmarkButton.tsx';
+import BookmarkButton from '@components/BookmarkButton';
 
 interface TopicsCardProps {
   artwork: Artwork;

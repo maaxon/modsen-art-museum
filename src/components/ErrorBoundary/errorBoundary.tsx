@@ -1,4 +1,4 @@
-import TitleSection from '@components/TitleSection/titleSection.tsx';
+import TitleSection from '@components/TitleSection';
 import React, { Component, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {

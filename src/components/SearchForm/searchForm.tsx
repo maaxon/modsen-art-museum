@@ -1,6 +1,6 @@
-import SmallCard from '@components/SmallCard/smallCard.tsx';
+import SmallCard from '@components/SmallCard';
 import { useDebounce } from '@hooks/useDebounce.ts';
-import { sortResults } from '@utils/sortUtils/sortUtils.ts';
+import { sortResults } from '@utils/sortUtils';
 import {ChangeEvent, memo, useState} from 'react';
 
 import {
@@ -15,7 +15,7 @@ import {
   Wrapper,
 } from './searchForm.styles.ts';
 import SortButton from '@components/SortButton/sortButton.tsx';
-import SmallCardsLoader from "@components/SkeletonLoader/SmallCardsLoader.tsx";
+import {SmallCardsLoader} from "@components/SkeletonLoader";
 import { SEARCH_ITEMS } from "@constants/constants.ts";
 import {useSearch} from "@hooks/useSearch.ts";
 
